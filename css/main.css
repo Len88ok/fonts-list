@@ -65,3 +65,16 @@ body {
     border-color: #ddd;
     cursor: not-allowed;
 }
+
+select {
+    width: 150px;
+    margin: auto;
+    background-color: transparent;
+}
+
+.fonts-list-wrap {
+    width: 80%;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background-color: #FFF;
+}

@@ -1,7 +1,9 @@
 <!doctype html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List of fonts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" />
     <!-- Include the AngularJS library -->
@@ -14,30 +16,33 @@
       <div class="container">
         <div class="jumbotron">
           <h1 class="display-3 text-center">Google Fonts</h1>
-          <h4 class="display-6 text-center mb-4">Number of fonts - {{fontsList.items.length}}</h4>
-          <div class="row mb-3">
-            <div class="col-4 lead">Family</div>
-            <div class="col-4 lead">Category</div>
-            <div class="col-4 lead">Variants</div>
-          </div>
+          <h4 class="display-6 text-center mb-4">Number of fonts - <span class="text-success">{{fontsList.items.length}}</span></h4>
 
+          <div class="fonts-list-wrap">
+            
+            <div class="row mb-3">
+              <div class="col-4 lead text-center text-primary">Family</div>
+              <div class="col-4 lead text-center text-primary">Category</div>
+              <div class="col-4 lead text-center text-primary">Variants</div>
+            </div>
 
-          <div class="fonts-list" dir-paginate="item in fontsList.items | itemsPerPage: 20" current-page="currentPage" pagination-id="first-pager">
-          
-            <div class="row">
-              <div class="col-4">
-                  {{ item.family }}
-              </div>
-              <div class="col-4">
-                  {{ item.category }}
-              </div>
-              <div class="col-4">
-                  <select name="fontVariant">
-                     <option ng-repeat="variant in item.variants">{{ variant }}</option>
-                 </select>
+            <div class="fonts-list" dir-paginate="item in fontsList.items | itemsPerPage: 20" current-page="currentPage" pagination-id="first-pager">            
+              <div class="row">
+                <div class="col-4 text-center">
+                    {{ item.family }}
+                </div>
+                <div class="col-4 text-center">
+                    {{ item.category }}
+                </div>
+                <div class="col-4 text-center">
+                    <select name="fontVariant">
+                       <option ng-repeat="variant in item.variants">{{ variant }}</option>
+                   </select>
+                </div>
               </div>
             </div>
-          </div> 
+
+          </div>          
 
           <nav class="text-center" aria-label="Page navigation">
             <dir-pagination-controls pagination-id="first-pager" boundary-links="true"></dir-pagination-controls>
