@@ -78,3 +78,19 @@ select {
     padding: 20px;
     background-color: #FFF;
 }
+
+@media only screen and (max-device-width:768px){
+    .fonts-list-wrap {
+        width: 100%;
+        padding: 20px 5px;
+    }
+    select {
+        width: auto;
+    }
+}
+
+@media only screen and (max-device-width:480px){
+    .jumbotron {
+        padding: .5em;
+    }
+}
