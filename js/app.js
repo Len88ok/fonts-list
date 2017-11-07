@@ -1,1 +1,1 @@
-var app = angular.module('FontApp', ['angularUtils.directives.dirPagination']);
+var app = angular.module('FontApp', []);
